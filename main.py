@@ -110,9 +110,15 @@ def get_usdt_rate() -> float:
 
 
 def calc_usdt_from_try(amount_try: int) -> Decimal:
-    # ŞİMDİLİK TEST İÇİN SABİT 1 USDT
-    # Yayına alırken: Decimal(amount_try) / Decimal(get_usdt_rate())
-    return Decimal("1.00")
+    """
+    TRY → USDT çevirir (Binance USDT/TRY kuru ile)
+    """
+    rate = Decimal(str(get_usdt_rate()))
+    usdt = Decimal(str(amount_try)) / rate
+
+    # 2 ondalık gösterim (USDT için ideal)
+    return usdt.quantize(Decimal("0.01"))
+
 
 
 def build_support_footer() -> str:
