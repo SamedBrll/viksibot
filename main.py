@@ -354,10 +354,13 @@ def build_payment_keyboard():
 
 
 def build_admin_links_text():
-    parts = []
-    for i, admin_id in enumerate(ADMIN_IDS, start=1):
-        parts.append(f'<a href="tg://user?id={admin_id}">Admin {i}</a>')
-    return " / ".join(parts) if parts else "admin"
+    if not ADMIN_USERNAMES:
+        return "admin"
+
+    return " / ".join(
+        f"@{u.lstrip('@')}" for u in ADMIN_USERNAMES
+    )
+
 
 
 # ===================== HANDLERS =====================
