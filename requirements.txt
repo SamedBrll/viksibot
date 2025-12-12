@@ -1,0 +1,9 @@
+python-telegram-bot==21.4
+requests
+aiohttp
+Flask
+json
+os
+html
+time
+Decimal
