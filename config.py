@@ -1,7 +1,13 @@
 # config.py
 
-BOT_TOKEN = "8425160395:AAHDIRa-zT8FsNZ5CBxvA2sTA_fgneUl9kY"          # Bot token
-ADMIN_IDS = [8252398438, 7705015038]
+import os
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+ADMIN_IDS = list(
+    map(int, os.getenv("ADMIN_IDS", "").split(","))
+)
+
 
 ADMIN_USERNAMES = ["viskiletisim"]
 
