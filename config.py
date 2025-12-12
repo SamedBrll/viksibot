@@ -1,7 +1,7 @@
 # config.py
 
-BOT_TOKEN = "8237975380:AAHzyp4KtnjgoPQi_7EvLWoxnNX-NrT9hwM"          # Bot token
-ADMIN_IDS = [937987476]
+BOT_TOKEN = "8425160395:AAHDIRa-zT8FsNZ5CBxvA2sTA_fgneUl9kY"          # Bot token
+ADMIN_IDS = [8252398438, 7705015038]
 
 ADMIN_USERNAMES = ["viskiletisim"]
 
